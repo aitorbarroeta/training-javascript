@@ -305,10 +305,27 @@
 //   }
 // }
 // ejemplo para sacar los numero impares
-let counter = 1
-while (counter++ <= 100){
-  if(counter % 2 != 0){
+// let counter = 1
+// while (counter++ <= 100){
+//   if(counter % 2 != 0){
 
-    console.log(counter);
+//     console.log(counter);
+//   }
+// }
+// probando el bucle do while
+
+let totalBet = 0;
+do {
+  totalBet = prompt("Please enter your bet");
+  if (totalBet == 5000) {
+    alert("All in!");
+  } else if (totalBet < 5000) {
+    alert("Passing this round");
   }
-}
+  if (totalBet > 5000) {
+    alert("Bet limit 5000, please change your bet");
+  }
+  if (isNaN(totalBet)) {
+    alert("Please, enter a numeric value");
+  }
+} while (totalBet > 5000 || isNaN(totalBet));
