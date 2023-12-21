@@ -366,11 +366,125 @@
 
 // objetos y arrays (Vectores y matrices)
 
-let star = {
-  name: "Polaris",
-  constellation: "Ursa Minor",
-  type: "Double/Cepheid",
-  spectralClass:"F7",
-  mag:2.0,
-};
-console.log(star.name);
+// let star = {
+//   name: "Polaris",
+//   constellation: "Ursa Minor",
+//   type: "Double/Cepheid",
+//   spectralClass:"F7",
+//   mag:2.0,
+//   "": "acceptable",
+// };
+// console.log(star.name);
+// star.constellation = "Ursa Major"
+// console.log(star.constellation);
+
+// let num1 = 4;
+// let num2 = num1;
+// console.log(num2);
+// num2 = 7
+// console.log(num1);
+// console.log(num2);
+
+// let star2 = star;
+// star2.name = "Mizar";
+// star2.mag= 5.7;
+
+// console.log(star.name);
+// console.log(star2.name);
+
+// otro ejemplo de objeto
+// let hero = {
+//   character: "Ironman",
+//   name: "TOny Stark",
+//   powers: [
+//     "Genius level intellect",
+//     "Multiple powered armor suits",
+//     "Ability to fly",
+//   ],
+//   info: {
+//     yearCreated: 1963,
+//     powerOrigin: "From his suit",
+//     weapons: ["repulsor rays", "uni-beam projector", "lasers"],
+//     didYouKnow:
+//       "Tony Stark created and build one of the Spider-Man`s upgraded suits know as the Iron Spider Suit. we goy a smoll glimpse os it Spider-Man: Homevoming!",
+//   },
+// };
+
+// let hero2 = new Object ()
+// hero2.character = "Hulk";
+// hero2.name = "Bruce Banner"
+// hero2.powers = [
+//   "strengh",
+//   "speed",
+//   "stamina",
+//   "durability",
+//   "regeneration",
+//   "night invulnerability",
+//   "breathing underwater",
+// ];
+// console.log(Object.keys(hero2));
+// console.log(Object.keys(hero));
+
+//ejercicio de los apuntes
+
+// let shoppingCart = {
+//   zapatillas: {
+//     product_id: 0,
+//     name: "nike",
+//     price: 58.25,
+//     quantity: 3,
+//   },
+//   camiseta: {
+//     product_id: 1,
+//     name: "adidas",
+//     price: 25,
+//     quantity: 3,
+//   },
+//   chaqueta: {
+//     product_id: 2,
+//     name: "ternua",
+//     price: 108.5,
+//     quantity: 4,
+//   },
+//   pantalon: {
+//     product_id: 3,
+//     name: "puma",
+//     price: 18.25,
+//     quantity: 6,
+//   },
+// };
+// console.log(
+//   shoppingCart.zapatillas,
+//   shoppingCart.camiseta,
+//   shoppingCart.chaqueta,
+//   shoppingCart.pantalon
+// );
+// otra forma de sacar los valores en la cual no estan tan bien definidas ya que estan dentro de un desplegable
+// // console.log(Object.values(shoppingCart));
+
+// // ejemplo de explicacion de arrays
+// let team = ["luffy", "Zoro", "Sanji"];
+// //para indicar el numero de array que queremos ver tiene que ir entre corchetes
+// console.log(team[0]);
+// // para saber cual es el ultimo array que se metio utilizamos length-1
+// console.log(team[team.length - 1]);
+
+
+// como generar un test para el ejercicio 10 de numeros aleatorios
+// let fails = false;
+// let min = 1;
+// let max = 6;
+// let player1 = Math.floor(Math.random()*(max - min +1))+min;
+// let player2 = Math.floor(Math.random()*(max - min +1))+min;
+
+// for (let index = 0; index < 10000; index++) {
+//   player1 = Math.floor(Math.random()*(max - min +1))+min;
+//   if(player1 < 1 || player1 > 6){fails = true;}
+  
+// }
+// if (fails) {
+//   console.error("test fail")
+  
+// } else {
+//   console.log("%c test pass", "color: #008000")
+// }
