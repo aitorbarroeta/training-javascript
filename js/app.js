@@ -314,18 +314,63 @@
 // }
 // probando el bucle do while
 
-let totalBet = 0;
-do {
-  totalBet = prompt("Please enter your bet");
-  if (totalBet == 5000) {
-    alert("All in!");
-  } else if (totalBet < 5000) {
-    alert("Passing this round");
-  }
-  if (totalBet > 5000) {
-    alert("Bet limit 5000, please change your bet");
-  }
-  if (isNaN(totalBet)) {
-    alert("Please, enter a numeric value");
-  }
-} while (totalBet > 5000 || isNaN(totalBet));
+// let totalBet = 0;
+// do {
+//   totalBet = prompt("Please enter your bet");
+//   if (totalBet == 5000) {
+//     alert("All in!");
+//   } else if (totalBet < 5000) {
+//     alert("Passing this round");
+//   }
+//   if (totalBet > 5000) {
+//     alert("Bet limit 5000, please change your bet");
+//   }
+//   if (isNaN(totalBet)) {
+//     alert("Please, enter a numeric value");
+//   }
+// } while (totalBet > 5000 || isNaN(totalBet));
+
+//probando ejemplo del pdf de do/while
+// let option = null;
+// let colors = ["red", "green", "blue"];
+// do {
+//   console.log("Please, choose a color");
+//   for (let index = 0; index < colors.length; index++) {
+//     console.log(index + 1 + "." + colors[index]);
+//   }
+//   console.log("Press 0 to leave");
+//   option = prompt("Make your choice");
+//   switch (option) {
+//     case "1":
+//       console.log("%cHex code for red: #FF0000","color: rgb(36, 184, 36);");
+
+//       break;
+//     case "2":
+//       console.log("%cHex code for green: #008000","color: rgb(37, 221, 190);");
+
+//       break;
+//     case "3":
+//       console.log("%cHex code for blue: #0000FF","color: rgb(44, 195, 12);");
+
+//       break;
+
+//     default:
+//       if (option != 0) {
+//         console.warn("Not a valid option, please try again");
+//       } else {
+//         console.log("Exiting, see you soon!");
+//       }
+//       break;
+//   }
+// } while (option != 0);
+
+// objetos y arrays (Vectores y matrices)
+
+let star = {
+  name: "Polaris",
+  constellation: "Ursa Minor",
+  type: "Double/Cepheid",
+  spectralClass:"F7",
+  mag:2.0,
+};
+console.log(star.name);
