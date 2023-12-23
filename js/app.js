@@ -469,7 +469,6 @@
 // // para saber cual es el ultimo array que se metio utilizamos length-1
 // console.log(team[team.length - 1]);
 
-
 // como generar un test para el ejercicio 10 de numeros aleatorios
 // let fails = false;
 // let min = 1;
@@ -480,11 +479,279 @@
 // for (let index = 0; index < 10000; index++) {
 //   player1 = Math.floor(Math.random()*(max - min +1))+min;
 //   if(player1 < 1 || player1 > 6){fails = true;}
-  
+
 // }
 // if (fails) {
 //   console.error("test fail")
-  
+
 // } else {
 //   console.log("%c test pass", "color: #008000")
+// }
+
+// // usando el metodo original increased [...original]
+// let team = ["luffy", "sanji", "zoro", "nami", "robin"];
+// console.log(team[4]);
+// team[5]= "brook"
+// console.log(team);
+// // estas dos formas son iguales pero la recomendable es la primera
+// let team2 = [...team];
+// let team6 = Array.from(team);
+
+// team6[0] = "jimbe"
+
+// team2[0] = "jimbe"
+// console.log(team[0]);
+// console.log(team2[0]);
+// team = ["franky", ...team];
+// console.log(team);
+// // estas tres formas son iguales pero la recomendable es la primera
+// let team5 = ["luffy", "sanji", "zoro", "nami", "robin"];
+// let team3 = new Array("brook", "yamato", "ussop");
+// let team4 = new Array("brook", "yamato", "ussop");
+
+// //para sacar un array de arrays
+// console.log([...team.entries()]);
+
+// dando sentido a como hacer los funtion y crearlas
+// function compare (value1,value2){
+//     if(value1 < value2){
+//         return -1;
+//     } else if (value1 > value2) {
+//         return 1;
+//     } else {
+//         return 0;
+//     }
+
+// }
+// con esta variable guardamos el mensaje que sale de la funcion para tener la informacion almacenada
+// let result =compare (3,3)
+// console.log(result);
+
+//
+// function compare(value1, value2) {
+//     console.log("working!");
+//   if (value1 < value2) {
+//     return -1;
+//   } else if (value1 > value2) {
+//     return 1;
+//   } else {
+//     return 0;
+//   }
+// }
+// let numbers = [0,1,5,10,15];
+// con reverse damos la vuelta a la array
+// numbers.reverse();
+// console.log(numbers);
+//con esto damos la vuelta pero no dejamos el array modificado
+// let numbers = [0, 1, 5, 10, 15];
+// let copyOfNumbers = [...numbers];
+// let secondCopyOfNumbers = Array.from(numbers);
+// copyOfNumbers.reverse();
+// console.log(numbers);
+// console.log(copyOfNumbers);
+// console.log(secondCopyOfNumbers);
+// secondCopyOfNumbers.sort();
+// console.log(secondCopyOfNumbers);
+// probando a ordenar arrays con ,sort
+// let team = [
+//   "Alice",
+//   "Sebastian",
+//   "Ismael",
+//   "Fran",
+//   "David Miro",
+//   "David Calero",
+// ];
+// team.sort();
+// console.log(team);
+// secondCopyOfNumbers.sort(compare)
+// console.log(secondCopyOfNumbers);
+// let unorderednumbers = [20,-8,3,102,43,18]
+// unorderednumbers.sort(compare)
+// console.log(unorderednumbers);
+
+//probamos otra manera de hacer una funcion de ordenacion
+// let unorderednumbers = [20,-8,3,3,102,43,18]
+// let counter = 0;
+// unorderednumbers.sort(
+//     function(value1,value2) {
+//         counter++;
+//         console.log("value1;",value1);
+//         console.log("value2;",value2);
+//         console.log("result;",value1 - value2);
+//         return value1 - value2;
+
+//     }
+//     )
+//     console.log(counter);
+//     console.log(unorderednumbers);
+
+// ahora ordenamos de mayor a menor
+// let unorderednumbers = [20, -8, 3, 3, 102, 43, 18];
+// let counter = 0;
+// unorderednumbers.sort(
+//   //esta parte es igual que la funcion flecha de abajo
+//   function (value1, value2) {
+//     return value1 - value2;
+//   }
+// );
+// unorderednumbers.sort((value1, value2) => value2 - value1);
+// console.log(unorderednumbers);
+
+//ejemplo de el pdf de curso
+// let numbers = [3, 9, 8, 1, 4];
+// for (let i = 0; i < numbers.length - 2; i++) {
+//   console.log(numbers);
+//   for (let j = 0, aux = 0; j < numbers.length - 1; j++) {
+//     if (numbers[j] > numbers[j + 1]) {
+//       aux = numbers[j];
+//       numbers[j] = numbers[j + 1];
+//       numbers[j + 1] = aux;
+//     }
+//   }
+// }
+// console.log(numbers);
+
+// manera de visualizar los elementos de la Array
+// let numbers = [3,9,8,1,4];
+// for (let num of numbers){
+//     console.log(num);
+// }
+
+// para visualizar los objetos
+// let shoppingCart = {
+//     product1: {
+//         id: 1,
+//         name: "trainers",
+//         price:109.65,
+//         quantity:6,
+//     },
+//     product2: {
+//         id: 2,
+//         name: "glovers",
+//         price:9.65,
+//         quantity:1,
+//     },
+//     product3: {
+//         id: 3,
+//         name: "t-shirt",
+//         price:19.65,
+//         quantity:2,
+//     },
+//     product4: {
+//         id: 4,
+//         name: "suitcase",
+//         price:119.65,
+//         quantity:4,
+//     }
+// }
+// for(let key in shoppingCart){
+//     console.log(shoppingCart[key]);
+//     console.log(shoppingCart[key].name);
+// }
+
+//otro ejemplo
+// let pirate ={
+//     charater: "Mugiwara",
+//     name: "Monkey D. Luffy",
+// }
+// for (let key in pirate){
+//     console.log(`${key}=> ${pirate[key]}`);
+// }
+
+//ejemplo de antonio
+// ["Aragorn", "Gandalf", "Nazgul"].forEach((element, index, array) => {
+//   console.log(`${element} is a index ${index} in ${array}`);
+// });
+// [..."Soberano de Angmar en tiempos pasados"].forEach((letter) => {
+//   console.log(letter);
+// });
+
+// // ejemplo de como tener un nuevo array de un array que tiene una serie de modificaciones
+// // esta funcion .map se usa mucho en react
+// let numbers = [1, 2, 3];
+// let mappedNumbers = numbers.map((number) => number * 2);
+// console.log(mappedNumbers);
+// // vamos a realizar un filtro para sacar los numeros inferiores a 3
+// let filteredNumbers = numbers.filter(number => number < 3)
+// console.log(filteredNumbers);
+// //aqui vamos a verlo en un console.log en vez de meterlo en una variable y vemos si son mayores que dos
+// console.log(
+//     numbers.every(number => number > 2)
+// );
+// //aqui vemos si alguno de ellos cumple la condicion de ser mayor que dos
+// console.log(
+//     numbers.some(number => number > 2)
+// );
+// // aqui sumamos los elementos que hay dentro de la array de dos formas diferentes
+// let totalSum = numbers.reduce((accum, number)=> accum + number,0)
+// console.log(totalSum);
+// totalSum = 0;
+// totalSum = numbers.reduceRight((accum, number)=> accum + number,0)
+// console.log(totalSum);
+
+//ejemplo array anidadas
+// realizamos un calendario con javascript
+// let calendar = new Array(5);
+// for (let i = 0; i < calendar.length; i++) {
+//   calendar[i] = new Array(7);
+// }
+// for (let row = 0, day = 1; row < calendar.length; row++) {
+//   for (let col = 0; col < calendar[row].length; col++) {
+//     if (day < 31) {
+//       calendar[row][col] = day++;
+//     } else if (day == 31) {
+//       calendar[row][col] = day;
+//       day = 1;
+//     }
+//   }
+// }
+// console.log(calendar);
+
+// como declarar una funcion ejemplo
+// function sayHello(name){
+//     console.log(`hi, ${name}`);
+//     return name.length;
+// }
+// let letter = 0;
+// leteer = sayHello("aitor");
+// console.log(`your name has ${letter} letters`);
+// leteer = sayHello("mia");
+// console.log(`your name has ${letter} letters`);
+// leteer = sayHello("gorka");
+// console.log(`your name has ${letter} letters`);
+// leteer = sayHello("ana");
+// console.log(`your name has ${letter} letters`);
+// leteer = sayHello("jose");
+// console.log(`your name has ${letter} letters`);
+// leteer = sayHello("max");
+// console.log(`your name has ${letter} letters`);
+// leteer = sayHello("vilma");
+// console.log(`your name has ${letter} letters`);
+
+// aqui metemos una funcion dentro de una variable
+// con const hacemos que no se pueda modificar la variable
+// const sum = function (num1, num2){
+//     return num1 + num2;
+// };
+// console.log(sum(2,2));
+// console.log(sum(1,3));
+// console.log(sum(0,4));
+
+// usamos la funcion flecha para ver como se utilizan es lo mismo que lo anterior pero con menos codigo.
+// const sum = function (num1, num2){
+//     return num1 + num2;
+// };
+// const sum2 = (num1, num2) => num1 + num2;
+// console.log(sum(2,2));
+// console.log(sum(1,3));
+// console.log(sum2(11,11));
+
+
+
+// posible solucion de un proximo ejercicio
+// function numAleatorio(min,max){
+//    console.log( Math.floor(Math.random()*(max - min +1))+min);
+// }
+// for (let index = 0; index<20; index++) {
+//     numAleatorio(1,7)
 // }
