@@ -17,6 +17,20 @@
 //     .join("\n"))
 // }
 // asteriscos(4)
+//opcion vista en la correccion de ejercicios (modifico yo los parametros de rows y columns para que lo solicite el usuario y lo saco en alert en vez de en consola)
+// const exercise3 = () => {
+//     let result= "";
+//     let rows= prompt("indica cuantas filas quieres");
+//     let columns= prompt("indica cuantas columnas quieres");
+//     for (let index = 0; index < rows; index++) {
+//         for (let index = 0; index < columns; index++) {
+//             result += "*";
+//         }
+//         result +="\n"
+//     }
+//     alert(result);
+// }
+// exercise3();
 
 //ejercicio 4
 // let mondayTem = 13;
@@ -159,6 +173,18 @@
 // }
 
 //ejercicio 6
+let text = prompt("Introduzca un texto para poder sacar estadisticas");
+console.log(text);
+console.log("Length: " + text.length);
+let space_length = text.split(" ").length;
+let witout_space = text.length - (space_length-1);
+console.log( "Length witout white-space: "+ witout_space + " charactersWords: " + space_length);
+let unique_words = text.split(" ");
+console.log(unique_words);
+
+
+
+
 
 //ejercicio 7
 // function numAleatorio(min, max) {
