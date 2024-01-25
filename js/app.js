@@ -746,8 +746,6 @@
 // console.log(sum(1,3));
 // console.log(sum2(11,11));
 
-
-
 // posible solucion de un proximo ejercicio
 // function numAleatorio(min,max){
 //    console.log( Math.floor(Math.random()*(max - min +1))+min);
@@ -755,3 +753,124 @@
 // for (let index = 0; index<20; index++) {
 //     numAleatorio(1,7)
 // }
+
+// //ejemplo del temario de los objetos
+// let name = "Tony Stark";
+
+// let hero = {
+//   name,
+//   powers: {
+//     powers: [
+//       "flight",
+//       "artificial intelligence",
+//       "armored suit",
+//       "super strengh + durability",
+//     ],
+//   },
+// };
+// hero.character = "Iron Man"
+// console.log(hero.name);
+// console.log(hero.powers.powers[2]);
+// console.log(hero.character);
+
+// //computed property keys
+// let powers = [
+//     "Master of the Mystic Arts",
+//     "Astral Projection",
+//     "Teleportation",
+// "Eye of Agamotto",
+// "Cloak of Levitation",
+// ]
+// let drStrange = {
+//     name: "Stephen Strange"
+// }
+// powers.forEach((element,index) => {drStrange[`power${index}`]= element;});
+// for (const key in drStrange){
+//     console.log(`${key}: ${drStrange[key]}`);
+// }
+
+//explicacion de clases y objetos
+//crear clases
+//this. es para especificar las propiedad
+// class Villains{}
+// class Avengers{
+//     constructor(character, name){
+//         this.character = character;
+//         this.name = name;
+//         this.powers = [];
+//         this.bio = "";
+//     }
+//     set power(newPower){
+//         this.powers.push(newPower)
+//     }
+//     get power(){
+//         console.log(this.powers.join(","));
+//     }
+//     static avengersBio(){
+//         this.bio = `Earth's Mightiest Heroes stand as the planet's first line of defense against the most powerful threats in the universe`
+//         console.log(this.bio);
+//     }
+// }
+// //como utilizarlas
+// let ironMan = new Avengers("Iron Man", "Tony Stark")
+// ironMan.power = "Flight";
+// ironMan.power = "Artificial Intelligence";
+// ironMan.power = "Armored Suit"
+// ironMan.power
+// Avengers.avengersBio()
+
+//crea una clase llamada User que define un constructor que recibe un parametro dni
+// a continuacion añade los set y get para el nombre y el email
+// crea un objeto, dale un nombre y un email y muestralos por pantalla
+//opcion creada por mi
+// class User{
+//     constructor (dni){
+//         this.dni = dni;
+//         this.name = "";
+//         this.emails = "";
+//     }
+//     set email(newEmail){
+//         this.emails.push(newEmail)
+//     }
+    
+// }
+// let aitor = new User("78942647T");
+// aitor.name = "aitor"
+// aitor.emails = "aitor2pcpi@gmail.com"
+// console.log(aitor.dni);
+// console.log(aitor.name);
+// console.log(aitor.emails);
+
+//opcion creada por la clase
+class User{
+    constructor (dni){
+        this.dni = dni;
+        this.name = "";
+        this.emails = "";
+    }
+    set email(newEmail){
+        this.emails.push(newEmail)
+    }
+    set setName(newName){
+        this.name.push(newName)
+    }
+    set setdni(newDni){
+        this.dni.push(newDni)
+    }
+    get UserName(){
+        console.log(this.name);
+    }
+    get UserEmail(){
+        console.log(this.emails);
+    }
+    get UserDni(){
+        console.log(this.dni);
+    }
+    
+}
+let aitor = new User("78942647T");
+aitor.name = "aitor"
+aitor.emails = "aitor2pcpi@gmail.com"
+console.log(aitor.dni);
+console.log(aitor.name);
+console.log(aitor.emails);
